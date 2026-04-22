@@ -1,0 +1,178 @@
+// Geography puzzle bank — countries, capitals, landmarks, physical geography
+
+export const geography = [
+  // --- EASY ---
+  {
+    id: 'g1', difficulty: 'easy', type: 'mcq',
+    question: 'What is the capital city of France?',
+    options: ['Lyon', 'Marseille', 'Paris', 'Bordeaux'],
+    answer: 'Paris',
+    hint: 'Home to the Eiffel Tower',
+  },
+  {
+    id: 'g2', difficulty: 'easy', type: 'mcq',
+    question: 'Which is the largest ocean in the world?',
+    options: ['Atlantic', 'Indian', 'Arctic', 'Pacific'],
+    answer: 'Pacific',
+    hint: 'It covers more than 30% of Earth\'s surface',
+  },
+  {
+    id: 'g3', difficulty: 'easy', type: 'fill',
+    question: 'How many continents are there on Earth?',
+    answer: '7',
+    hint: 'Africa, Asia, Europe, North America, South America, Australia, Antarctica',
+  },
+  {
+    id: 'g4', difficulty: 'easy', type: 'mcq',
+    question: 'Which country has the longest coastline in the world?',
+    options: ['Russia', 'Australia', 'Norway', 'Canada'],
+    answer: 'Canada',
+    hint: 'It includes coastlines along three oceans',
+  },
+  {
+    id: 'g5', difficulty: 'easy', type: 'mcq',
+    question: 'What is the capital of Japan?',
+    options: ['Osaka', 'Kyoto', 'Tokyo', 'Hiroshima'],
+    answer: 'Tokyo',
+    hint: 'It\'s one of the most populated cities in the world',
+  },
+  {
+    id: 'g6', difficulty: 'easy', type: 'mcq',
+    question: 'Which is the largest desert in the world?',
+    options: ['Sahara', 'Arctic', 'Antarctic', 'Gobi'],
+    answer: 'Antarctic',
+    hint: 'A desert is defined by low precipitation, not just heat',
+  },
+  {
+    id: 'g7', difficulty: 'easy', type: 'fill',
+    question: 'What is the longest river in the world?',
+    answer: 'Nile',
+    hint: 'It flows northward through northeastern Africa',
+  },
+  {
+    id: 'g8', difficulty: 'easy', type: 'mcq',
+    question: 'Which country is home to the Amazon Rainforest?',
+    options: ['Colombia', 'Venezuela', 'Peru', 'Brazil'],
+    answer: 'Brazil',
+    hint: 'Most of it (about 60%) lies within this country',
+  },
+  {
+    id: 'g9', difficulty: 'easy', type: 'mcq',
+    question: 'What is the tallest mountain in the world?',
+    options: ['K2', 'Kangchenjunga', 'Mount Everest', 'Lhotse'],
+    answer: 'Mount Everest',
+    hint: 'It\'s in the Himalayas, on the Nepal-Tibet border',
+  },
+  {
+    id: 'g10', difficulty: 'easy', type: 'mcq',
+    question: 'Which country has the largest population?',
+    options: ['USA', 'India', 'China', 'Russia'],
+    answer: 'India',
+    hint: 'It surpassed China in 2023',
+  },
+
+  // --- MEDIUM ---
+  {
+    id: 'g11', difficulty: 'medium', type: 'mcq',
+    question: 'What is the capital of Australia?',
+    options: ['Sydney', 'Melbourne', 'Canberra', 'Brisbane'],
+    answer: 'Canberra',
+    hint: 'It was purpose-built as a compromise between Sydney and Melbourne',
+  },
+  {
+    id: 'g12', difficulty: 'medium', type: 'mcq',
+    question: 'Through which countries does the Nile river flow before reaching Egypt?',
+    options: ['Only Sudan', 'Sudan and Ethiopia', 'Sudan, Ethiopia, Uganda, and others', 'Only Ethiopia'],
+    answer: 'Sudan, Ethiopia, Uganda, and others',
+    hint: 'The Nile has two main tributaries: White Nile and Blue Nile',
+  },
+  {
+    id: 'g13', difficulty: 'medium', type: 'fill',
+    question: 'What is the smallest country in the world by area?',
+    answer: 'Vatican City',
+    hint: 'It\'s an independent city-state within Rome',
+  },
+  {
+    id: 'g14', difficulty: 'medium', type: 'mcq',
+    question: 'Which sea lies between Europe and Africa?',
+    options: ['Red Sea', 'Black Sea', 'Mediterranean Sea', 'Caspian Sea'],
+    answer: 'Mediterranean Sea',
+    hint: 'Many ancient civilizations thrived around its shores',
+  },
+  {
+    id: 'g15', difficulty: 'medium', type: 'mcq',
+    question: 'How many time zones does Russia have?',
+    options: ['7', '9', '11', '13'],
+    answer: '11',
+    hint: 'Russia spans about 10,000 km east to west',
+  },
+  {
+    id: 'g16', difficulty: 'medium', type: 'fill',
+    question: 'What is the capital of Brazil?',
+    answer: 'Brasília',
+    hint: 'It\'s not São Paulo or Rio — it was purpose-built in the 1950s',
+  },
+  {
+    id: 'g17', difficulty: 'medium', type: 'mcq',
+    question: 'On which continent is the Sahara Desert located?',
+    options: ['Asia', 'Australia', 'South America', 'Africa'],
+    answer: 'Africa',
+    hint: 'It stretches across North Africa',
+  },
+  {
+    id: 'g18', difficulty: 'medium', type: 'mcq',
+    question: 'What is the deepest lake in the world?',
+    options: ['Lake Baikal', 'Lake Titicaca', 'Lake Superior', 'Lake Tanganyika'],
+    answer: 'Lake Baikal',
+    hint: 'It\'s in Siberia, Russia, and contains ~20% of the world\'s fresh water',
+  },
+  {
+    id: 'g19', difficulty: 'medium', type: 'mcq',
+    question: 'Which country has the most natural UNESCO World Heritage Sites?',
+    options: ['Italy', 'China', 'Brazil', 'India'],
+    answer: 'China',
+    hint: 'It leads with dozens of sites including the Great Wall',
+  },
+  {
+    id: 'g20', difficulty: 'medium', type: 'fill',
+    question: 'What is the name of the strait between Europe and Africa (joining Atlantic to Mediterranean)?',
+    answer: 'Strait of Gibraltar',
+    hint: 'It\'s only about 14 km wide at its narrowest point',
+  },
+
+  // --- HARD ---
+  {
+    id: 'g21', difficulty: 'hard', type: 'mcq',
+    question: 'What is the capital of Kazakhstan?',
+    options: ['Almaty', 'Shymkent', 'Astana', 'Karaganda'],
+    answer: 'Astana',
+    hint: 'It was formerly known as Nur-Sultan and before that Astana',
+  },
+  {
+    id: 'g22', difficulty: 'hard', type: 'mcq',
+    question: 'Which river runs through the most countries?',
+    options: ['Amazon', 'Danube', 'Nile', 'Rhine'],
+    answer: 'Danube',
+    hint: 'It flows through 10 countries in Europe',
+  },
+  {
+    id: 'g23', difficulty: 'hard', type: 'fill',
+    question: 'What is the name of the world\'s highest plateau, often called the "Roof of the World"?',
+    answer: 'Tibetan Plateau',
+    hint: 'It sits at an average elevation of over 4,500 metres',
+  },
+  {
+    id: 'g24', difficulty: 'hard', type: 'mcq',
+    question: 'Which country is the only one to border both the Atlantic and Indian Oceans?',
+    options: ['Mozambique', 'South Africa', 'Namibia', 'Angola'],
+    answer: 'South Africa',
+    hint: 'The Cape of Good Hope is at its southern tip',
+  },
+  {
+    id: 'g25', difficulty: 'hard', type: 'mcq',
+    question: 'Which ocean current keeps Western Europe warmer than it would otherwise be?',
+    options: ['Labrador Current', 'Humboldt Current', 'Gulf Stream', 'California Current'],
+    answer: 'Gulf Stream',
+    hint: 'It carries warm water from the Gulf of Mexico northward',
+  },
+];
