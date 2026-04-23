@@ -68,7 +68,6 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevent body scroll */
 }
 
 body {
@@ -78,14 +77,13 @@ body {
   -webkit-font-smoothing: antialiased;
   display: flex;
   flex-direction: column;
+  overflow-y: auto; /* Allow scrolling if content exceeds height */
 }
 
 #root {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  overflow-y: auto; /* Allow internal scrolling if needed */
+  min-height: 100%;
   padding-bottom: env(safe-area-inset-bottom);
 }
 
@@ -118,11 +116,12 @@ h1, h2, h3, h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 16px 16px 24px;
+  padding: 16px 16px calc(24px + env(safe-area-inset-bottom));
+  padding-top: calc(16px + env(safe-area-inset-top));
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 600px;
+  max-width: 500px; /* Slightly reduced for better fit */
   margin: 0 auto;
   animation: screenIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   box-sizing: border-box;
@@ -169,10 +168,9 @@ h1, h2, h3, h4 {
 /* --- Subject Cards Grid --- */
 .subjects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
   width: 100%;
-  max-width: 480px;
 }
 
 .subject-card {
@@ -261,7 +259,6 @@ h1, h2, h3, h4 {
   align-items: center;
   gap: 16px;
   width: 100%;
-  max-width: 400px;
 }
 .difficulty-header {
   text-align: center;
@@ -338,7 +335,6 @@ h1, h2, h3, h4 {
 /* --- Game Screen --- */
 .game-screen {
   width: 100%;
-  max-width: 520px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -672,7 +668,6 @@ h1, h2, h3, h4 {
 /* --- Results Screen --- */
 .results-screen {
   width: 100%;
-  max-width: 440px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -828,7 +823,6 @@ h1, h2, h3, h4 {
   padding: 10px 16px;
   margin-bottom: 12px;
   width: 100%;
-  max-width: 480px;
 }
 .xp-total {
   font-family: var(--font-display);
@@ -864,11 +858,17 @@ h1, h2, h3, h4 {
 .subject-card:nth-child(6) { animation-delay: 0.30s; }
 
 /* --- Mobile responsiveness --- */
-@media (max-width: 380px) {
-  .subjects-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-  .subject-card  { padding: 18px 12px; }
-  .subject-icon  { font-size: 2rem; }
+@media (max-width: 400px) {
+  .brand-name    { font-size: 1.6rem; }
+  .subjects-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .subject-card  { padding: 16px 10px; }
+  .subject-icon  { font-size: 1.8rem; }
+  .question-text { font-size: 1.1rem; }
   .options-grid  { grid-template-columns: 1fr; }
-  .results-stats { grid-template-columns: repeat(3, 1fr); }
-  .brand-name    { font-size: 1.8rem; }
+  .stat-val      { font-size: 1.3rem; }
+}
+
+@media (max-width: 320px) {
+  .subjects-grid { grid-template-columns: 1fr; }
+  .results-stats { grid-template-columns: 1fr; }
 }
