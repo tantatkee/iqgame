@@ -548,11 +548,12 @@ h1, h2, h3, h4 {
 /* Fill-in input */
 .fill-input-wrap {
   display: flex;
-  gap: 10px;
-  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
 }
 .fill-input {
-  flex: 1;
+  width: 100%;
   background: var(--bg-base);
   border: 1.5px solid var(--border);
   border-radius: var(--radius-md);
@@ -573,14 +574,15 @@ h1, h2, h3, h4 {
   opacity: 0.7;
 }
 .btn-submit {
+  width: 100%;
   background: linear-gradient(135deg, var(--accent, #6366f1), var(--accent, #6366f1));
   border: none;
   border-radius: var(--radius-md);
-  padding: 12px 20px;
+  padding: 14px 20px;
   color: white;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: all var(--transition-normal);
   box-shadow: 0 4px 14px var(--glow, rgba(99,102,241,0.3));
@@ -611,19 +613,19 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 6px;
   flex-wrap: wrap;
 }
 .seq-item {
   background: var(--bg-base);
   border: 1.5px solid var(--accent, #a78bfa);
   border-radius: var(--radius-sm);
-  padding: 10px 14px;
+  padding: 8px 10px;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-primary);
-  min-width: 44px;
+  min-width: 36px;
   text-align: center;
 }
 .seq-item.unknown {
